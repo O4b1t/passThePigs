@@ -21,7 +21,6 @@ public class GenericBot extends Player {
                 return true;
             }
         }
-        System.out.println(super.getName() + " passes.");
         return false;
     }
     

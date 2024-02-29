@@ -24,7 +24,6 @@ public class CowardBot extends Player {
             }
         }
         cnt = 0;
-        System.out.println(super.getName() + " passes.");
         return false;
     }
 }

@@ -17,15 +17,13 @@ public class WisdomBot extends Player {
 
     public boolean wantsToRoll(int myScore, int handScore, ArrayList<Integer> otherScores, int winningScore) {
         if (myScore < winningScore) {
-            if (handScore < 21 && handScore >= winningScore - myScore) {
+            if (handScore < 21) {
                 return true;
             } else if (Collections.max(otherScores) > 90) {
                 return true;
             }
-            System.out.println(super.getName() + " passes.");
             return false;
         }
-        System.out.println(super.getName() + " passes.");
         return false;
     }
 }

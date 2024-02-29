@@ -20,7 +20,6 @@ public class CuteBot extends Player {
             return true;
         }
         cnt = 0;
-        System.out.println(super.getName() + " passes.");
         return false;
     }
 }

@@ -17,15 +17,13 @@ public class PassThePigs{
         System.out.println("Welcome come to Pass the Pigs!");
         ArrayList<Player> players = new ArrayList<>();
         players.add(new GenericBot("GenericBot"));
-        players.add(new Human("Stanley"));
+        //players.add(new Human("Stanley"));
         players.add(new CowardBot("CowardBot"));
         players.add(new WisdomBot("WisdomBot"));
         players.add(new CuteBot("CuteBot"));
         for (int i = 0; i < players.size(); i++) {
             scores.add(0);
         }
-        
-        System.out.println(players.get(0).getStrategy() + "  " + players.get(2).getStrategy());
         
         while (gameOn) {
             for (int i = 0; i < players.size(); i++) {
@@ -43,6 +41,7 @@ public class PassThePigs{
                         break;
                     }
                 }
+                System.out.println(players.get(i).getName() + " passes.");
                 System.out.println("---------------------------------------------------------------------------------------------------------");
                 scores.set(i, scores.get(i) + handScore);
                 if (scores.get(i) >= winningScore) {
