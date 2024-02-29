@@ -17,7 +17,7 @@ public class PassThePigs{
         System.out.println("Welcome come to Pass the Pigs!");
         ArrayList<Player> players = new ArrayList<>();
         players.add(new GenericBot("GenericBot"));
-        //players.add(new Human("Stanley"));
+        players.add(new Human("Stanley"));
         players.add(new CowardBot("CowardBot"));
         players.add(new WisdomBot("WisdomBot"));
         players.add(new CuteBot("CuteBot"));
