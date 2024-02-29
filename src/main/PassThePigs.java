@@ -16,12 +16,16 @@ public class PassThePigs{
         boolean gameOn = true;
         System.out.println("Welcome come to Pass the Pigs!");
         ArrayList<Player> players = new ArrayList<>();
-        players.add(new Bot("GenericBot"));
-        scores.add(0);
+        players.add(new GenericBot("GenericBot"));
         players.add(new Human("Stanley"));
-        scores.add(0);
-        players.add(new Bot("CowardBot"));
-        scores.add(0);
+        players.add(new CowardBot("CowardBot"));
+        players.add(new WisdomBot("WisdomBot"));
+        players.add(new CuteBot("CuteBot"));
+        for(int i = 0; i < players.size(); i++){
+            scores.add(0);
+        }
+        
+        System.out.println(players.get(0).getStrategy() + "  " + players.get(2).getStrategy());
         
         while(gameOn) {
             for(int i = 0; i < players.size(); i++){

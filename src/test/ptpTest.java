@@ -5,7 +5,7 @@ import org.junit.Test;
 public class ptpTest{
     @Test
     public void test(){
-        Player A = new Bot("GenericBot");
+        Player A = new GenericBot("GenericBot");
         assertTrue(A.getName().equals("GenericBot") );
     }
 }

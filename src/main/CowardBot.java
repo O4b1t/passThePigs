@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class CowardBot extends Player {
-    String strategy;
+    //String strategy;
     
     public CowardBot(String n){
         super(n);
@@ -14,7 +14,7 @@ public class CowardBot extends Player {
     }
 
     public String getStrategy(){
-        return this.strategy;
+        return strategy;
     }
 
     public boolean wantsToRoll(int myScore, int handScore, ArrayList<Integer> otherScores, int winningScore){

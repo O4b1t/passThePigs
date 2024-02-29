@@ -19,6 +19,7 @@ public class Pigs {
         score = 0.0;
         for(int i = 0; i < numOfPigs; i++){
             int num = (int)(Math.random() * 1000);
+            System.out.println(num);
             if(num<349){
                 pigs[i] = "Dot";
                 score += 0.25;

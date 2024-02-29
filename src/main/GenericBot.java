@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 
-public class Bot extends Player {
-    String strategy = "Always Roll";
-    public Bot(String n){
+public class GenericBot extends Player {
+    //String strategy = "Always Roll";
+    public GenericBot(String n){
         super(n);
+        super.strategy = "Always Roll";
     }
 
     public String getName(){
@@ -11,7 +12,7 @@ public class Bot extends Player {
     }
 
     public String getStrategy(){
-        return this.strategy;
+        return strategy;
     }
 
     public boolean wantsToRoll(int myScore, int handScore, ArrayList<Integer> otherScores, int winningScore){
