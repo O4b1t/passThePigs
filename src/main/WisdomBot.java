@@ -19,7 +19,7 @@ public class WisdomBot extends Player {
         if (myScore < winningScore) {
             if (handScore < 21) {
                 return true;
-            } else if (Collections.max(otherScores) > 90) {
+            } else if (winningScore - Collections.max(otherScores) < (winningScore - myScore)/2 || Collections.max(otherScores) > 90) {
                 return true;
             }
             return false;
