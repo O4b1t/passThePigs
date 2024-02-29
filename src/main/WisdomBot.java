@@ -4,7 +4,7 @@ import java.util.Collections;
 public class WisdomBot extends Player {
     public WisdomBot(String n) {
         super(n);
-        super.strategy = "I will try to get reach 21 point every time";
+        super.strategy = "I will try to get reach 23 point every time";
     }
 
     public String getStrategy() {
@@ -17,9 +17,9 @@ public class WisdomBot extends Player {
 
     public boolean wantsToRoll(int myScore, int handScore, ArrayList<Integer> otherScores, int winningScore) {
         if (myScore < winningScore) {
-            if (handScore < 21) {
+            if (handScore < 24) {
                 return true;
-            } else if (winningScore - Collections.max(otherScores) < (winningScore - myScore)/2 || Collections.max(otherScores) > 90) {
+            } else if (winningScore - Collections.max(otherScores) < (winningScore - myScore) / 2 || Collections.max(otherScores) > 90) {
                 return true;
             }
             return false;

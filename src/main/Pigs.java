@@ -15,7 +15,7 @@ public class Pigs {
         return pigs[1];
     }
 
-    public boolean haveDouble() {
+    public boolean haveDouble() { //not really used, but you can implement in the future for easy access
         return haveDouble;
     }
 

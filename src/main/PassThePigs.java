@@ -26,7 +26,7 @@ public class PassThePigs{
         }
         
         while (gameOn) {
-            for (int i = 0; i < players.size(); i++) {
+            for (int i = 0; i < players.size(); i++) { //Cycle through players
                 printScoreBoard(players, scores);
                 int handScore = 0;
                 while ((players.get(i)).wantsToRoll(scores.get(i), handScore, scores, winningScore)) {
