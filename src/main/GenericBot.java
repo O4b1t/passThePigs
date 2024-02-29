@@ -16,11 +16,11 @@ public class GenericBot extends Player {
     }
 
     public boolean wantsToRoll(int myScore, int handScore, ArrayList<Integer> otherScores, int winningScore) {
-        if (myScore < winningScore) {
-            if (handScore < 30) {
-                return true;
-            }
+        
+        if (handScore < 30) {
+            return true;
         }
+        
         return false;
     }
     

@@ -16,14 +16,14 @@ public class WisdomBot extends Player {
     }
 
     public boolean wantsToRoll(int myScore, int handScore, ArrayList<Integer> otherScores, int winningScore) {
-        if (myScore < winningScore) {
-            if (handScore < 24) {
-                return true;
-            } else if (winningScore - Collections.max(otherScores) < (winningScore - myScore) / 2 || Collections.max(otherScores) > 90) {
-                return true;
-            }
-            return false;
+        
+        if (handScore < 24) {
+            return true;
+        } else if (winningScore - Collections.max(otherScores) < (winningScore - myScore) / 2 || Collections.max(otherScores) > 90) {
+            return true;
         }
         return false;
+        
+        
     }
 }

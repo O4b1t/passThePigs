@@ -17,12 +17,12 @@ public class CowardBot extends Player {
     }
 
     public boolean wantsToRoll(int myScore, int handScore, ArrayList<Integer> otherScores, int winningScore) {
-        if (myScore < winningScore) {
-            if (cnt < 3) {
-                cnt++;
-                return true;
-            }
+        
+        if (cnt < 3) {
+            cnt++;
+            return true;
         }
+        
         cnt = 0;
         return false;
     }
