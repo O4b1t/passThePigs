@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 
 public class CuteBot extends Player {
-    public CuteBot(String n){
+    int cnt = 0;
+    public CuteBot(String n) {
         super(n);
-        super.strategy = "Roll until I get a double";
+        super.strategy = "Roll once every turn because I am cute";
     }
 
     public String getName() {
@@ -12,5 +13,14 @@ public class CuteBot extends Player {
 
     public String getStrategy() {
         return strategy;
+    }
+
+    public boolean wantsToRoll(int myScore, int handScore, ArrayList<Integer> otherScores, int winningScore){
+        if (cnt < 1) {
+            return true;
+        }
+        cnt = 0;
+        System.out.println(super.getName() + " passes.");
+        return false;
     }
 }
