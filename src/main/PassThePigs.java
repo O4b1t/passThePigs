@@ -46,7 +46,7 @@ public class PassThePigs{
                 scores.set(i, scores.get(i) + handScore);
                 if (scores.get(i) >= winningScore) {
                     gameOn = false;
-                    System.out.println(players.get(i).getName() + " won!");
+                    System.out.println(players.get(i).getName() + " won! This player's strategy is: " + players.get(i).getStrategy() + ".");
                     return;
                 }
             }
