@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class WisdomBot extends Player {
     public WisdomBot(String n){
@@ -17,6 +18,8 @@ public class WisdomBot extends Player {
     public boolean wantsToRoll(int myScore, int handScore, ArrayList<Integer> otherScores, int winningScore) {
         if(myScore < winningScore) {
             if(handScore < 21 && handScore >= winningScore - myScore){
+                return true;
+            }else if(Collections.max(otherScores) > 90){
                 return true;
             }
             return false;
